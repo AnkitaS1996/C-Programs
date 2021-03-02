@@ -7,6 +7,7 @@ float Calculate_Total_Percentage(int *Total,int **Sub_Marks)
     int i = 0;
 
     int *P = &Sub_Marks;
+    
     printf("\n Display Subject Marks is : \n");
     for(i = 0;i < 3;i++)
     {
@@ -14,10 +15,10 @@ float Calculate_Total_Percentage(int *Total,int **Sub_Marks)
 
         printf("\n\t\t %d",*P);
         *Total = *Total + *P;
-
     }
     return ((*Total/300.0)*100);
 }
+
 int main()
 {
     int i = 0,Total = 0;
@@ -32,6 +33,7 @@ int main()
         printf("\n Enter %d Subject Marks = ",i+1);
         scanf("%d",&Sub_Marks[i]);
     }
+    
     Per = Calculate_Total_Percentage(&Total,&Sub_Marks);
 
     printf("\n\n Total Marks Of Given Student Are = %d.",Total);
